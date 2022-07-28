@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg);
+}
+
+.theme {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: var(--theme-bg);
+    color: var(--theme-text);
+    border: 2px solid var(--theme-border);
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'PT Sans', sans-serif;
+    transition: all 0.4s ease-out;
+}
+
+.light-text {
+    display: none;
+}
+
+.sun {
+    display: none;
+}
+
+
+.container {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    background: var(--drum-machine);
+    border: 4px solid var(--border);
+}
+
+.keys-container {
+    padding: 1rem;
+    height: 100%;
+    width: 50%;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+    transition: all 0.4s ease-out;
+}
+
+.drum-pad {
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease;
+    font-weight: bold;
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.playing {
+    background: var(--key-press);
+    transform: scale(0.95);
+}
+
+.info {
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info h1 {
+    border-bottom: 3px solid var(--h1);
+    padding: 0 1rem 0.8rem 1rem;
+    color: var(--h1);
+    font-family: 'Titillium Web', sans-serif;
+    transition: all 0.4s ease-out;
+    font-weight: bold;
+}
+
+.audio-name {
+    min-height: 40px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-weight: bold;
+    font-family: 'Titillium Web';
+    letter-spacing: 0.1ch;
+    transition: all 0.1s ease-out;
+}
+
+/* ===== TOGGLE THEMES ===== */
+.show {
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
+:root {
+    --main-grey: #282828;
+
+    --light-grey: #eaebea;
+    --light-blue: #cdd3db;
+    --smoked-blue: #aab8d1;
+
+    --dark-grey0: #636363;
+    --dark-grey1: #272727;
+    --dark-grey2: #1c1c1c;
+}
+
+.light {
+    --bg: var(--light-blue);
+    --text: var(--main-grey);
+    --border: var(--smoked-blue);
+
+    --theme-text: var(--light-grey);
+    --theme-bg: var(--dark-grey2);
+    --theme-border: var(--main-grey);
+
+    --drum-machine: var(--light-grey);
+    --key-press: var(--smoked-blue);
+
+    --h1: var(--main-grey);
+}
+
+.dark {
+    --bg: var(--dark-grey2);
+    --text: var(--light-grey);
+    --border: var(--dark-grey0);
+
+    --theme-text: var(--light-grey);
+    --theme-bg: var(--smoked-blue);
+    --theme-border: var(--light-blue);
+
+    --drum-machine: var(--dark-grey1);
+    --key-press: var(--dark-grey0);
+
+    --h1: var(--light-grey);
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (max-width: 900px) {
+    .info h1 i {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .theme {
+        width: 140px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}

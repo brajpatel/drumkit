@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/b72f458627.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Drumkit</title>
+</head>
+
+<body class="light">
+
+    <div id="theme" class="theme">
+        <h5 class="m-2">
+            <span id="dark-text" class="dark-text">Dark</span>
+            <span id="light-text" class="light-text">Light</span>
+            Theme
+        </h5>
+        <i id="sun" class="sun fa-solid fa-sun"></i>
+        <i id="moon" class="moon fa-solid fa-moon"></i>
+    </div>
+
+    <div id="drum-machine" class="container">
+        <div id="keys" class="keys-container">
+            <div data-key="81" id="Q" class="drum-pad">Q</div>
+            <div data-key="87" id="W" class="drum-pad">W</div>
+            <div data-key="69" id="E" class="drum-pad">E</div>
+            <div data-key="65" id="A" class="drum-pad">A</div>
+            <div data-key="83" id="S" class="drum-pad">S</div>
+            <div data-key="68" id="D" class="drum-pad">D</div>
+            <div data-key="90" id="Z" class="drum-pad">Z</div>
+            <div data-key="88" id="X" class="drum-pad">X</div>
+            <div data-key="67" id="C" class="drum-pad">C</div>
+        </div>
+        <div id="info" class="info">
+            <h1>Drumkit<i class="ms-3 fa-solid fa-fire"></i></h1>
+            <div id="display" class="audio-name mt-3">Audio Name</div>
+        </div>
+    </div>
+
+    <audio data-key="81" src="/sounds/a-hit.wav">A Hit</audio>
+    <audio data-key="87" src="/sounds/manny-horn-hit.wav">Manny Horn Hit</audio>
+    <audio data-key="69" src="/sounds/blackpunch.wav">Black Punch</audio>
+    <audio data-key="65" src="/sounds/bass-rhodes-punch.wav">Bass Rhodes Punch</audio>
+    <audio data-key="83" src="/sounds/banging-lofi-hat.wav">Banging Lofi Hat</audio>
+    <audio data-key="68" src="/sounds/cut-through-ride.wav">Cut Through RIde</audio>
+    <audio data-key="90" src="/sounds/clap.wav">Clap</audio>
+    <audio data-key="88" src="/sounds/distort-tom.wav">Distort Tom</audio>
+    <audio data-key="67" src="/sounds/ohhat.wav">Ohhat</audio>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
