@@ -8,3 +8,4 @@ You can check out a live demo of this project [here](https://brajpatel.github.io
 - CSS
 - JavaScript
 - Bootstrap
+- [Font Awesome](https://fontawesome.com/)
